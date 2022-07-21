@@ -80,7 +80,7 @@ class DownloadApk(var context: Context) : AppCompatActivity() {
             var flag = false
 
             try {
-                val path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).toString() + "/"
+                val path = Environment.getExternalStorageDirectory().toString() + "/"
                 var outputFile = File("$path$fileName.apk")
                 var repetition = 1
                 while (outputFile.exists()) {
